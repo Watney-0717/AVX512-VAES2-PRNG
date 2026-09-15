@@ -38,16 +38,15 @@ Combines GFNI, VPSHUFB + VPTERNLOGD, HMix, Final Diagonal, and a 2-stage VAES sa
 📊 Throughput Comparison
 Benchmark Environment: AMD EPYC (with AVX-512 / VAES / GFNI support)
 
-+----------------------------------------------+-------------------+-----------------------------------------------------+
-| Algorithm / Approach                         | Throughput        | Notes                                               |
-+----------------------------------------------+-------------------+-----------------------------------------------------+
-| [This Implementation] Hybrid Structure       | 0.0932 cpb        | 5.964 cycles / 64-byte output (Best: ~0.093 cpb)    |
-| ChaCha8 (AVX-512 8-16 parallel)              | ~0.08 - 0.18 cpb  | Equivalent to the fastest range (~0.08 cpb)         |
-| VAES (Vector AES-256)                        | ~0.16 - 0.20 cpb  | Standard Vector AES implementation                  |
-| ChaCha20 (AVX-512 8 parallel)                | ~0.35 - 0.50 cpb  | Standard CSPRNG specification                       |
-| PCG32 / XorShift128+                         | ~0.60 - 1.00 cpb  | Non-cryptographic lightweight PRNGs                 |
-| Mersenne Twister (mt19937)                   | ~4.00 - 6.00 cpb  | Legacy standard PRNG                                |
-+----------------------------------------------+-------------------+-----------------------------------------------------+
+```markdown
+| Algorithm / Approach | Throughput | Notes |
+| :--- | :--- | :--- |
+| **[This Implementation] Hybrid Structure** | **`0.0932 cpb`** | **5.964 cycles / 64-byte output (Best: ~0.093 cpb)** |
+| ChaCha8 (AVX-512 8-16 parallel) | ~0.08 - 0.18 cpb | Equivalent to the fastest range (~0.08 cpb) |
+| VAES (Vector AES-256) | ~0.16 - 0.20 cpb | Standard Vector AES implementation |
+| ChaCha20 (AVX-512 8 parallel) | ~0.35 - 0.50 cpb | Standard CSPRNG specification |
+| PCG32 / XorShift128+ | ~0.60 - 1.00 cpb | Non-cryptographic lightweight PRNGs |
+| Mersenne Twister (mt19937) | ~4.00 - 6.00 cpb | Legacy standard PRNG |
 
 🧪 Statistical Screening Results
 Summary
