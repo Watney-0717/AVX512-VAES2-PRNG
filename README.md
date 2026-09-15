@@ -49,6 +49,7 @@ Benchmark Environment: AMD EPYC (with AVX-512 / VAES / GFNI support)
 | PCG32 / XorShift128+                         | ~0.60 - 1.00 cpb  | Non-cryptographic lightweight PRNGs                 |
 | Mersenne Twister (mt19937)                   | ~4.00 - 6.00 cpb  | Legacy standard PRNG                                |
 +----------------------------------------------+-------------------+-----------------------------------------------------+
+**` ``` `**
 
 🧪 Statistical Screening Results
 Summary
